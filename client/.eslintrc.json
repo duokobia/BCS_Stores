@@ -1,0 +1,198 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "ethers": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    //Security
+    "react/no-danger-with-children": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-script-url": [
+      "error",
+      [
+        {
+          "name": "Link",
+          "props": ["to"]
+        },
+        {
+          "name": "Foo",
+          "props": ["href", "to"]
+        }
+      ]
+    ],
+    //Maintainability
+    "react/react-in-jsx-scope": "off",
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": true
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "object-curly-newline": "off",
+
+    "no-restricted-exports": "off",
+
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelComponents": ["CustomLabel"],
+        "labelAttributes": ["inputLabel"],
+        "controlComponents": ["CustomInput"],
+        "assert": "both",
+        "depth": 3
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false,
+        "allowNamedExports": true
+      }
+    ],
+    "no-trailing-spaces": [
+      "error",
+      {
+        "skipBlankLines": true,
+        "ignoreComments": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": false,
+        "bundledDependencies": true
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/button-has-type": [
+      "error",
+      {
+        "button": true,
+        "submit": true,
+        "reset": true
+      }
+    ],
+    "react/prop-types": "off",
+    "react/jsx-curly-brace-presence": [
+      "error",
+      {
+        "props": "never",
+        "children": "never",
+        "propElementValues": "always"
+      }
+    ],
+    "react/jsx-first-prop-new-line": "warn",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-unused-vars": [
+      "error",
+      { "vars": "local", "args": "all", "ignoreRestSiblings": false }
+    ],
+    "react/jsx-indent-props": "off",
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "svg": "always",
+        "jpeg": "always",
+        "png": "always"
+      }
+    ],
+    "react/no-unstable-nested-components": [
+      "error",
+      {
+        "allowAsProps": true,
+        "customValidators": [] /* optional array of validators used for propTypes validation */
+      }
+    ],
+    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "import/no-named-as-default": 0,
+    "react/jsx-key": [
+      "error",
+      {
+        "checkFragmentShorthand": true,
+        "warnOnDuplicates": true
+      }
+    ],
+    "react/jsx-closing-bracket-location": [
+      "error",
+      {
+        "nonEmpty": "line-aligned",
+        "selfClosing": "tag-aligned"
+      }
+    ],
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "enforceForJSX": true,
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "react/no-unknown-property": ["error", { "ignore": ["jsx", "css"] }],
+    "jsx-a11y/no-static-element-interactions": [
+      "error",
+      {
+        "handlers": [
+          "onClick",
+          "onMouseDown",
+          "onMouseUp",
+          "onKeyPress",
+          "onKeyDown",
+          "onKeyUp"
+        ],
+        "allowExpressionValues": true
+      }
+    ],
+    "react/jsx-no-comment-textnodes": "off",
+    "react/jsx-filename-extension": "off"
+  },
+  "ignorePatterns": ["node_modules", "/public/**", "/resources/**"]
+}
