@@ -17,27 +17,106 @@ code {
     monospace;
 }
 /* utils */
-li {
+/* li {
+  text-decoration: none;
+} */
+/* header */
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  z-index: 999;
+}
+.subheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background: #051b4a;
+  background: #6f0705;
+  background: #9a1c19;
+  color: whitesmoke;
+  width: 100%;
+  height: 30px;
+}
+.subheader__nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+}
+.subheader__nav li {
+  color: whitesmoke;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 14px;
+}
+.subheader__nav li a {
+  color: whitesmoke;
+  list-style: none;
   text-decoration: none;
 }
-/* header */
+
 .header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: black;
+  background: #002169;
+  background: #ad1f1d;
+  background: #6f0705;
+
   color: whitesmoke;
   width: 100%;
   height: 80px;
-  padding: 0 20px;
+  padding: 0 30px;
+  /* position: fixed;
+  z-index: 999; */
+  /* margin: auto; */
 }
-.header__nav > ul {
+.header__logo a {
+  font-size: 26px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.header__nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
   color: whitesmoke;
 }
-.header--items > li {
+.header__nav li {
+  list-style: none;
+  margin: 0 50px;
+  font-size: 18px;
+}
+.header__nav li a {
   text-decoration: none;
+  color: whitesmoke;
+}
+.header__nav li a:hover {
+  padding: 9px 10px;
+  border-radius: 5px;
+  background: #051b4a;
+  background: #ad1f1d;
+  text-decoration: none;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+}
+.header__nav .drop-menu {
+  /* display: flex;
+  flex-direction: column; */
+  background: #051b4a;
+  width: 180px;
+  top: 70px;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.header__icons span {
+  margin: 0 15px;
+  font-size: 18px;
 }

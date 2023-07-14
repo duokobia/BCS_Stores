@@ -1,9 +1,8 @@
-import { Fragment } from "react";
 import Header from "./components/header";
 import SideNav from "./components/sidenav";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (
   <>
