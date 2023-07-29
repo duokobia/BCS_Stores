@@ -1,4 +1,4 @@
-import { BsSearch, BsFillPersonFill, BsCart3, BsBagPlus } from "react-icons/bs";
+import { BsSearch, BsFillPersonFill, BsCart3 } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 
 const Header = () => (
@@ -26,20 +26,6 @@ const Header = () => (
         <ul>
           <li>
             <a href="/">New In</a>
-            {/* <ul className="drop-menu">
-              <li>
-                <a href="/"> Drop menu 1</a>
-              </li>
-              <li>
-                <a href="/">Drop menu 2</a>
-              </li>
-              <li>
-                <a href="/">Drop menu 3</a>
-              </li>
-              <li>
-                <a href="/">Drop menu 4</a>
-              </li>
-            </ul> */}
           </li>
           <li>
             <a href="/">Beddings</a>
@@ -64,9 +50,6 @@ const Header = () => (
         </span>
         <span>
           <BsCart3 />
-        </span>
-        <span>
-          <BsBagPlus />
         </span>
       </div>
     </header>
